@@ -19,7 +19,7 @@ defmodule Discuss.Mixfile do
   def application do
     [mod: {Discuss, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :logger, :ueberauth]]
+                    :phoenix_ecto, :postgrex, :logger, :ueberauth, :ueberauth_github]]
   end
 
   # Specifies which paths to compile per environment.
@@ -53,6 +53,6 @@ defmodule Discuss.Mixfile do
   defp aliases do
     ["ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
      "ecto.reset": ["ecto.drop", "ecto.setup"],
-     "test": ["ecto.create --quiet", "ecto.migrate", "test"]]
+     test: ["ecto.create --quiet", "ecto.migrate", "test"]]
   end
 end
