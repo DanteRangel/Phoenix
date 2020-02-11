@@ -6,7 +6,7 @@ defmodule Discuss.Repo.Migrations.CreateUsersTable do
       add :email, :string
       add :token, :string
       add :provider, :string
-
+      
       timestamps()
     end
   end
